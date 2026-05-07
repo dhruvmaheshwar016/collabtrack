@@ -1,0 +1,20 @@
+{
+  "name": "collabtrack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack CollabTrack app with React, Express, MongoDB, JWT auth, and role-based access control.",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "install:all": "npm install --workspaces",
+    "build": "npm run build --workspace client",
+    "start": "npm run start --workspace server",
+    "lint": "npm run lint --workspace client"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
